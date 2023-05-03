@@ -1,0 +1,38 @@
+<!-- views/posts/show.ejs -->
+
+<%- include('./../partials/head', {title: post.title}); %>
+
+
+<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="w-full">
+        <section>
+            <div class="overflow-hidden rounded-lg bg-white shadow">
+                <div class="p-6">
+                    <h1 class="text-xl font-bold"><%= post.title %></h1>
+                    <p class="mt-1 text-xs text-gray-500">Posted: <%= moment(post.created_at).format("YYYY-MM-DD") %></p>
+
+
+
+                    <p class="mt-3 text-sm max-w-2xl"><%= post.content %></p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="mt-8 ml-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <section>
+        <div class="overflow-hidden rounded-lg bg-white shadow">
+            <div class="p-6">
+                <h1 class="text-lg">Kommentera <%= post.title %></h1>
+
+                <form action="">
+                    <input type="hidden" name="postId" value="<%= post.id %>">
+                    <textarea name="" id="" class="mt-4 w-full p-5 border-0 bg-slate-100 rounded text-sm"></textarea>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+<%- include('./../partials/footer'); %>

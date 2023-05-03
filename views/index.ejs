@@ -1,0 +1,50 @@
+
+<%- include('partials/head', {title: "Min app"}); %>
+
+<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h1 class="sr-only">Page title</h1>
+    <!-- Main 3 column grid -->
+    <div class="grid grid-cols-1 items-start gap-4 lg:grid-cols-3 lg:gap-8">
+        <!-- Left column -->
+        <div class="grid grid-cols-1 gap-4 lg:col-span-2">
+            <section aria-labelledby="section-1-title">
+            <h2 class="sr-only" id="section-1-title">Section title</h2>
+            <div class="overflow-hidden rounded-lg bg-white shadow">
+                <div class="p-6">
+                    <% if (message.length > 0) { %>
+                        <div class="bg-yellow-100 p-10 mb-20">
+                            <ul>
+                                <% message.forEach(msg => { %>
+                                    <li><%= msg %></li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                    <% } %>
+
+                    <h1 class="text-2xl font-bold">Welcome to our service for creating posts!</h1>
+
+                    <p class="mt-6 text-sm">
+                        We're excited to have you join our community.
+                        <br><br>
+                        Before you start creating posts, please make sure you are logged in. <span class="font-bold">Only registered users are allowed to post</span>, so you'll need to create an account if you haven't already done so.
+                        <br><br>
+                        Once you're logged in, you'll be able to create new posts and share your thoughts with the community. Our service offers a user-friendly interface to help you create and publish your posts easily. You can also edit or delete your posts at any time.
+                        <br><br>
+                        We hope you enjoy using our service and look forward to seeing the amazing posts you create!
+                    </p>
+
+                    <a class="mt-8 inline-block px-4 py-2 bg-blue-300 text-white" href="/login">Login</a>
+
+                    <a class="mt-8 inline-block px-4 py-2 bg-blue-300 text-white" href="/signup">Sign up</a>
+
+                </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include('partials/footer'); %>

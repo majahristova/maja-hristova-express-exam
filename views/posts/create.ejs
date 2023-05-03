@@ -1,0 +1,32 @@
+<%- include('./../partials/head', {title: "New post"}); %>
+
+
+<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h1 class="sr-only">New post</h1>
+    <!-- Main 3 column grid -->
+    <div class="w-full">
+        <!-- Left column -->
+        <div class="grid grid-cols-1 gap-4 lg:col-span-2">
+            <section aria-labelledby="section-1-title">
+                <h2 class="sr-only" id="section-1-title">Section title</h2>
+                <div class="overflow-hidden rounded-lg bg-white shadow">
+                    <div class="p-6">
+
+                        <form class="" action="/posts" method="post">
+                            <div class="flex flex-col space-y-4">
+                                <input class="p-5 border-0 bg-slate-100 rounded" type="text" name="title" placeholder="Titel">
+                                <textarea class="p-5 border-0 bg-slate-100 rounded" name="content" id="" cols="30" rows="10" placeholder="Ditt inlägg"></textarea>
+                                <button class="bg-blue-400 text-white py-4" type="submit">Skicka</button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<%- include('./../partials/footer'); %>

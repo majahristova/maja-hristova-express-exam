@@ -1,0 +1,31 @@
+
+<%- include('partials/head', {title: "Login"}); %>
+
+    <div class="h-screen w-full flex items-center justify-center">
+        <div class="">
+            <div class="flex justify-center">
+                <svg class="w-40" viewBox="0 0 237 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M68 34C68 52.7777 52.7777 68 34 68C15.2223 68 0 52.7777 0 34C0 15.2223 15.2223 0 34 0C52.7777 0 68 15.2223 68 34Z" fill="#FF006E" fill-opacity="0.4"/>
+                    <path d="M68 114C68 132.778 52.7777 148 34 148C15.2223 148 0 132.778 0 114C0 95.2223 15.2223 80 34 80C52.7777 80 68 95.2223 68 114Z" fill="#FFA600"/>
+                    <path d="M153 114C153 132.778 137.554 148 118.5 148C99.4462 148 84 132.778 84 114C84 95.2223 99.4462 80 118.5 80C137.554 80 153 95.2223 153 114Z" fill="#008A85"/>
+                    <path d="M237 34C237 52.7777 221.778 68 203 68C184.222 68 169 52.7777 169 34C169 15.2223 184.222 0 203 0C221.778 0 237 15.2223 237 34Z" fill="#FFA600"/>
+                </svg>
+            </div>
+
+            <div class="mt-20 p-10 bg-white rounded-2xl shadow-xl">
+                <form class="login-form" method="post" action="/login">
+                    <div>
+                        <input class="w-full md:w-[400px] bg-gray-50 px-4 py-2 text-xl" type="text" name="email" placeholder="Name">
+                    </div>
+                    <div class="mt-3">
+                        <input class="w-full md:w-[400px] bg-gray-50 px-4 py-2 text-xl" type="text" name="password" placeholder="Password">
+                    </div>
+
+                    <button class="mt-8 bg-teal-500 text-white px-4 py-3 text-xl" type="submit">Logga in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<%- include('partials/footer'); %>
