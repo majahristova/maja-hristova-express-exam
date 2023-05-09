@@ -44,8 +44,6 @@ router.get('/dashboard', authMiddleware, (req, res) => {
 
 
 
-
-
 router.get('/logout', (req, res) => {
     if (req.session.authenticated && req.session.username) {
         req.session.authenticated = false;
@@ -68,7 +66,7 @@ router.post('/login', (req, res) => {
     const sql = 'SELECT * FROM users WHERE email = ? AND password = ?';
     const values = [email, password];
     db.query(sql, values, function (error, results, fields) {
-        if (error) throw error;
+        if (error) throw(error);
 
         if(results.length > 0){
             req.session.username = results[0].name;
@@ -77,9 +75,9 @@ router.post('/login', (req, res) => {
             req.flash('message', 'You are now logged in.');
             res.redirect('/dashboard');
         }else{
-            // res.send('Found no users')
+
             req.flash('message', 'No user found');
-            res.redirect('/dashboard');
+            res.redirect('/login');
         }
 
     });

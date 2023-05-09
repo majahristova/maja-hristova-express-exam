@@ -12,6 +12,16 @@
                 </svg>
             </div>
 
+            <% if (message.length > 0) { %>
+                <div class="bg-yellow-100 p-10 mb-20">
+                    <ul>
+                        <% message.forEach(msg => { %>
+                            <li><%= msg %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+            <% } %>
+
             <div class="mt-20 p-10 bg-white rounded-2xl shadow-xl">
                 <form class="login-form" method="post" action="/login">
                     <div>
@@ -26,6 +36,4 @@
             </div>
         </div>
     </div>
-
-
 <%- include('partials/footer'); %>
